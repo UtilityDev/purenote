@@ -68,6 +68,7 @@
     outline: none;
     border: none;
     font-size: 25px;
+    box-shadow: 3px 9px 35px -7px rgba(0,0,0,0.36);
     transition: 0.1s;
 }
 

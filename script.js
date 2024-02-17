@@ -59,12 +59,18 @@ noteContainer.addEventListener('keyup', () => {
 });
 
 // Deleting notes
+let pressCount = 0;
 noteContainer.addEventListener('keydown', (e) => {
     let activeNote = document.activeElement;
 
-    if (e.key == 'Backspace') {
-        if (activeNote.textContent.trim() === '') {
+    if (e.key === 'Backspace' || e.key === 'Escape') {
+        if (activeNote.textContent.trim() === '' || pressCount >= 2) {
             deleteNote(activeNote);
+            pressCount = 0;
         }
+    }
+
+    if (e.key === 'Escape') {
+        pressCount++;
     }
 });
