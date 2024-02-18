@@ -60,11 +60,10 @@
     position: relative;
     width: 100%;
     max-width: 550px;
-    min-height: 500px;
+    min-height: 200px;
     background: white;
     color: rgb(0, 0, 0);
     padding: 20px;
-    /* margin: 20px 0; */
     border-radius: 8px;
     outline: none;
     border: none;
