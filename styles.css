@@ -24,6 +24,7 @@
 
 .container > h1 {
     font-size: 80px;
+    text-shadow: 2.5px 2.5px 20px rgba(0, 0, 0, 0.679);
 }
 
 .btn {
@@ -33,14 +34,14 @@
     background: white;
     border-radius: 10px;
     font-size: 25px;
+    cursor: pointer;
+    box-shadow: 3px 9px 35px -7px rgba(0,0,0,0.36);
+    transition: 0.1s;
 }
 
 .btn:hover {
     font-weight: 600;
-}
-
-.delete-note-btn {
-    background-color: rgb(255, 39, 39);
+    outline: 3px solid rgb(0, 0, 0);
 }
 
 .note-container {
@@ -61,33 +62,18 @@
     max-width: 550px;
     min-height: 500px;
     background: white;
-    color: rgb(76, 22, 60);
+    color: rgb(0, 0, 0);
     padding: 20px;
     /* margin: 20px 0; */
     border-radius: 8px;
     outline: none;
     border: none;
     font-size: 25px;
-    box-shadow: 3px 9px 35px -7px rgba(0,0,0,0.36);
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.165);
     transition: 0.1s;
-}
-
-.input-box:focus {
-    border: 3px solid rgb(71, 71, 71);
 }
 
 /* Scrollbar */
 ::-webkit-scrollbar {
     display: none;
-}
-
-/* Material Symbols */
-.material-symbols-rounded {
-    font-variation-settings:
-    'FILL' 1,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24;
-    vertical-align: middle;
-    font-size: inherit;
 }

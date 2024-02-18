@@ -25,6 +25,7 @@ const newNote = () => {
     noteContainer.append(note);
 
     note.focus();
+    note.scrollIntoView();
 
     // Save note in localStorage
     updateLocalStorage();
