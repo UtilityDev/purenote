@@ -4,6 +4,14 @@ let deleteNoteBtn = document.querySelector('.delete-note-btn');
 
 const noteContainer = document.querySelector('.note-container');
 
+const contextMenu = document.querySelector('.context-menu');
+const contextElementNew = document.querySelector('.new-note-element');
+const contextElementCopy = document.querySelector('.copy-content');
+const contextElementDelete = document.querySelector('.delete-note');
+
+let contextMenuVisible = false;
+var selectedNote = undefined;
+
 // Load notes from localStorage into DOM
 const loadNotes = () => {
     noteContainer.innerHTML = localStorage.getItem("notes");
@@ -41,9 +49,26 @@ const clearNotes = () => {
 
 // Delete specificed note
 const deleteNote = (note) => {
-    note.remove();
+    if (note.className === 'input-box') note.remove();
+    // alert(note.className);
     updateLocalStorage();
 }
+
+const openContextMenu = (mouseX, mouseY) => {
+    selectedNote = document.activeElement;
+
+    contextMenu.style.display = 'block';
+    contextMenu.style.left = mouseX + 'px';
+    contextMenu.style.top = mouseY + 'px';
+
+    contextMenuVisible = true;
+};
+
+const hideContextMenu = () => {
+    contextMenu.style.display = 'none';
+
+    contextMenuVisible = false;
+};
 
 // Event handlers
 newNoteBtn.addEventListener('click', newNote);
@@ -75,3 +100,12 @@ noteContainer.addEventListener('keydown', (e) => {
         pressCount++;
     }
 });
+
+document.addEventListener('contextmenu', (e) => {
+    openContextMenu(e.clientX, e.clientY);
+    e.preventDefault();
+});
+
+document.addEventListener('click', () => {
+    if (contextMenuVisible) hideContextMenu();
+})

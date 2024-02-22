@@ -72,6 +72,39 @@
     transition: 0.1s;
 }
 
+/* Context menu */
+.context-menu {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 200px;
+    padding: 10px;
+    z-index: 100000;
+    background: white;
+    text-align: center;
+    border-radius: 10px;
+    /* border: 3px solid black; */
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.165);
+    box-sizing: border-box;
+}
+
+.context-menu > .context-element {
+    font-size: 21px;
+    transition: 0.09s;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.context-menu > .context-element:hover {
+    font-weight: 700;
+    cursor: pointer;
+    background: rgb(209, 209, 209);
+}
+
+.context-element.delete-note:hover {
+    background: red;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     display: none;

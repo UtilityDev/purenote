@@ -16,9 +16,10 @@
         </div>
         <div class="note-container"></div>
     </div>
-    <div class="context-menu">
-        <div class="copy-content context-element">copy content</div>
-        <div class="delete-note context-element">delete note</div>
+    <div class="context-menu" style="display:none">
+        <div class="new-note-element context-element" onclick="newNote()">new note</div>
+        <div class="copy-content context-element" onclick="alert('copied!')">copy content</div>
+        <div class="delete-note context-element" onclick="deleteNote(selectedNote)">delete note</div>
     </div>
     <script src="script.js"></script>
 </body>
