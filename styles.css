@@ -105,6 +105,16 @@
     background: red;
 }
 
+.github {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    width: 40px;
+    transition: 0.1s;
+}
+
+.github:hover { transform:scale(1.10) }
+
 /* Scrollbar */
 ::-webkit-scrollbar {
     display: none;
