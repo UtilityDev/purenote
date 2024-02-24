@@ -84,23 +84,6 @@ noteContainer.addEventListener('keyup', () => {
     updateLocalStorage();
 });
 
-// Deleting notes
-let pressCount = 0;
-noteContainer.addEventListener('keydown', (e) => {
-    let activeNote = document.activeElement;
-
-    if (e.key === 'Backspace' || e.key === 'Escape') {
-        if (activeNote.textContent.trim() === '' || pressCount >= 2) {
-            deleteNote(activeNote);
-            pressCount = 0;
-        }
-    }
-
-    if (e.key === 'Escape') {
-        pressCount++;
-    }
-});
-
 document.addEventListener('contextmenu', (e) => {
     openContextMenu(e.clientX, e.clientY);
     e.preventDefault();
