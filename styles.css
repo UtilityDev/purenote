@@ -51,10 +51,6 @@
     /* outline: 3px solid rgb(0, 0, 0); */
 }
 
-.btn#spark:hover {
-    transform:scale(1.05);
-}
-
 .note-container {
     display: flex;
     flex-wrap: wrap;
@@ -117,14 +113,20 @@
 }
 
 .github {
-    position: fixed;
-    bottom: 15px;
-    right: 15px;
     width: 40px;
     transition: 0.1s;
 }
 
-.github:hover { transform:scale(1.10) }
+.lower-right {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    gap: 20px;
+    bottom: 15px;
+    right: 15px;
+}
+
+.github:hover, .theme-btn:hover { transform:scale(1.05) }
 
 /* Scrollbar */
 ::-webkit-scrollbar {

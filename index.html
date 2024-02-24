@@ -13,7 +13,6 @@
         <div class="button-container">
             <button class="new-note-btn btn">write ✍️</button>
             <button class="clear-notes-btn btn">clear notes 🚫</button>
-            <button class="parse-html btn icon" id="spark">✨</button>
         </div>
         <div class="note-container"></div>
     </div>
@@ -22,7 +21,10 @@
         <div class="copy-content context-element" onclick="alert('copied!')">copy content</div>
         <div class="delete-note context-element" onclick="deleteNote(selectedNote)">delete note</div>
     </div>
-    <a href="https://www.github.com/UtilityDev/purenote/"><img src="assets/github-mark-white.png" alt="github logo" class="github"></a>    
+    <div class="lower-right">
+        <a href="https://www.github.com/UtilityDev/purenote/"><img src="assets/github-mark-white.png" alt="github logo" class="github"></a>    
+        <button class="theme-btn btn icon">✨</button>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
