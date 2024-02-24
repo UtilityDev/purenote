@@ -2,6 +2,9 @@
 
 :root {
     --global-padding: 4%;
+    --background-gradient: linear-gradient(135deg, rgba(255,129,239,1) 20%, rgba(119,0,255,1) 100%);
+    --background-gradient-2: linear-gradient(135deg, rgb(131, 129, 255) 20%, rgb(85, 0, 255) 100%);
+    --background-gradient-3: linear-gradient(135deg, rgb(255, 129, 129) 20%, rgb(255, 0, 0) 100%);
 }
 
 * {
@@ -14,7 +17,7 @@
 .container {
     width: 100%;
     min-height: 100vh;
-    background: linear-gradient(135deg, rgba(255,129,239,1) 20%, rgba(119,0,255,1) 100%);
+    background: var(--background-gradient);
     color: #fff;
     padding-top: 4%;
     padding-bottom: 2%;
@@ -39,9 +42,17 @@
     transition: 0.1s;
 }
 
+.btn.icon {
+    padding: 10px 10px;
+}
+
 .btn:hover {
     font-weight: 600;
-    outline: 3px solid rgb(0, 0, 0);
+    /* outline: 3px solid rgb(0, 0, 0); */
+}
+
+.btn#spark:hover {
+    transform:scale(1.05);
 }
 
 .note-container {
