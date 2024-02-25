@@ -2,7 +2,10 @@ const themeBtn = document.querySelector('.theme-btn');
 const themeContainer = document.querySelector('.theme-container');
 
 const initThemeSelect = () => {
-    themeContainer.style.display = 'flex';
+    if (themeContainer.style.display !== 'flex') {
+        themeContainer.style.display = 'flex';
+    }
+    else themeContainer.style.display = 'none';
 }
 
 const setTheme = (theme) => {
