@@ -21,10 +21,19 @@
         <div class="copy-content context-element" onclick="alert('copied!')">copy content</div>
         <div class="delete-note context-element" onclick="deleteNote(selectedNote)">delete note</div>
     </div>
+    <div class="theme-container" style="display: none">
+        <div class="theme-buttons-container">
+            <button class="theme-set-btn btn" onclick="setTheme('default')">confetti pink</button>
+            <button class="theme-set-btn btn" onclick="setTheme('blue')">ocean blue</button>
+            <button class="theme-set-btn btn" onclick="setTheme('red')">cherry lips</button>
+            <button class="theme-set-btn btn" onclick="setTheme('black')">midnight</button>
+        </div>
+    </div>
     <div class="lower-right">
         <a href="https://www.github.com/UtilityDev/purenote/"><img src="assets/github-mark-white.png" alt="github logo" class="github"></a>    
-        <button class="theme-btn btn icon">✨</button>
+        <button class="theme-btn btn icon" onclick="initThemeSelect()">✨</button>
     </div>
     <script src="src/script.js"></script>
+    <script src="src/themes.js"></script>
 </body>
 </html>

@@ -50,7 +50,6 @@ const clearNotes = () => {
 // Delete specificed note
 const deleteNote = (note) => {
     if (note.className === 'input-box') note.remove();
-    // alert(note.className);
     updateLocalStorage();
 }
 
