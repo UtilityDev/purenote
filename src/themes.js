@@ -1,7 +1,7 @@
 const themeBtn = document.querySelector('.theme-btn');
 const themeContainer = document.querySelector('.theme-container');
 
-if (localStorage.getItem("theme") !== undefined) {
+if (localStorage.getItem("theme") !== null) {
     document.body.className = localStorage.getItem("theme");
 }
 
