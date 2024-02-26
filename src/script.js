@@ -102,6 +102,7 @@ document.addEventListener('contextmenu', (e) => {
 
 contextElementColor.addEventListener('input', (e) => {
     selectedNote.style.backgroundColor = e.target.value;
+    updateLocalStorage();
 });
 
 document.addEventListener('click', () => {
