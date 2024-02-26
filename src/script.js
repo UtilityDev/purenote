@@ -63,9 +63,11 @@ const openContextMenu = (mouseX, mouseY) => {
     
     // Show note-specific context elements
     if (selectedNote.className === 'input-box') {
+        contextElementCopy.style.display = 'block';
         contextElementColor.parentElement.style.display = 'block';
         contextElementDelete.style.display = 'block';
     } else {
+        contextElementCopy.style.display = 'none';
         contextElementColor.parentElement.style.display = 'none';
         contextElementDelete.style.display = 'none';
     };
