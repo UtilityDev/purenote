@@ -100,6 +100,10 @@ document.addEventListener('contextmenu', (e) => {
     e.preventDefault();
 });
 
+contextElementColor.addEventListener('input', (e) => {
+    selectedNote.style.backgroundColor = e.target.value;
+});
+
 document.addEventListener('click', () => {
     if (contextMenuVisible) hideContextMenu();
 })
