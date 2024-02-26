@@ -112,6 +112,12 @@
     background: red;
 }
 
+input#note-colorpicker {
+    width: 100%;
+    outline: none;
+    border: none;
+}
+
 .theme-container {
     position: fixed;
     top: 0;

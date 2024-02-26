@@ -7,6 +7,7 @@ const noteContainer = document.querySelector('.note-container');
 const contextMenu = document.querySelector('.context-menu');
 const contextElementNew = document.querySelector('.new-note-element');
 const contextElementCopy = document.querySelector('.copy-content');
+const contextElementColor = document.querySelector('#note-colorpicker');
 const contextElementDelete = document.querySelector('.delete-note');
 
 let contextMenuVisible = false;
@@ -59,6 +60,15 @@ const openContextMenu = (mouseX, mouseY) => {
     contextMenu.style.display = 'block';
     contextMenu.style.left = mouseX + 'px';
     contextMenu.style.top = mouseY + 'px';
+    
+    // Show note-specific context elements
+    if (selectedNote.className === 'input-box') {
+        contextElementColor.parentElement.style.display = 'block';
+        contextElementDelete.style.display = 'block';
+    } else {
+        contextElementColor.parentElement.style.display = 'none';
+        contextElementDelete.style.display = 'none';
+    };
 
     contextMenuVisible = true;
 };
