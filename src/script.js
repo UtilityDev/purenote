@@ -11,7 +11,7 @@ const contextElementColor = document.querySelector('#note-colorpicker');
 const contextElementDelete = document.querySelector('.delete-note');
 
 let contextMenuVisible = false;
-var selectedNote = undefined;
+let selectedNote = undefined;
 
 // Load notes from localStorage into DOM
 const loadNotes = () => {
@@ -97,7 +97,7 @@ clearNotesBtn.addEventListener('click', () => {
 });
 
 // Update note data everytime a key has been released for constant updated note information
-noteContainer.addEventListener('keyup', () => {
+noteContainer.addEventListener('keyup', (e) => {
     updateLocalStorage();
 });
 
